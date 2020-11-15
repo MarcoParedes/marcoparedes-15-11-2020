@@ -1,0 +1,31 @@
+﻿
+@using MiniProject.Domain.Models;
+
+@model List<Photo>
+
+<h3>Photos</h3>
+
+<div class="card shadow no-border">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Image</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.ThumbnailUrl</td>
+                    <td>
+                        <a href="javascript:void(0)" class="btn-comments" data-id="@item.AlbumId">Ver Comentarios</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

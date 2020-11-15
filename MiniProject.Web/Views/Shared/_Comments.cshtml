@@ -1,0 +1,30 @@
+﻿
+@using MiniProject.Domain.Models;
+
+@model List<Comment>
+
+<h3>Comments</h3>
+
+<div class="card shadow no-border">
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Body</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
