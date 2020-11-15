@@ -3,9 +3,49 @@
 
 @model List<Photo>
 
-<h3>Photos</h3>
+<div class="accordion" id="accordionPhotos">
+    <div class="card shadow no-border">
+        <div class="card-header bordered-bottom" id="headingPhoto" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fa fa-picture-o"></i>
+            <span>Photos</span>
+            <div class="widget-buttons">
+                <a href="javascript:void(0)">
+                    <i class="fa fa-chevron-down rotate-icon"></i>
+                </a>
+            </div>
+        </div>
 
-<div class="card shadow no-border">
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingPhoto" data-parent="#accordionPhotos">
+            <div class="card-body">
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Image</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Title</td>
+                                <td>@item.ThumbnailUrl</td>
+                                <td class="comment">
+                                    <a href="javascript:void(0)" class="btn-comments" data-id="@item.AlbumId">Ver Comentarios</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="card shadow no-border">
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -28,4 +68,4 @@
         </tbody>
     </table>
 
-</div>
+</div>*@

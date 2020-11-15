@@ -1,0 +1,38 @@
+﻿
+.accordion .card .card-header {
+    height: 40px;
+    padding: 8px 15px;
+    background-color: white !important;
+    box-shadow: 2px 2px 40px #eee;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.accordion .card .widget-buttons a {
+    color: #000;
+    padding: 3px;
+}
+
+.accordion .card .card-header .widget-buttons {
+    float: right;
+}
+
+.accordion .card-header:not(.collapsed) .widget-buttons a .rotate-icon {
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    transition: .4s;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.accordion .widget-buttons a .rotate-icon {
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    transition: .4s;
+    color: darkgray;
+}
+
+.comment {
+    font-size: 14px;
+}

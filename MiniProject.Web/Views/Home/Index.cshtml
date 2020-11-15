@@ -86,6 +86,7 @@
             if ($(e.target).hasClass('btn-comments')) {
                 console.log($(e.target));
                 var id = $(e.target).attr('data-id');
+                $('#headingPhoto').trigger('click');
                 console.log(id);
                 $.ajax({
                     type: 'get',

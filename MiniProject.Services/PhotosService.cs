@@ -2,6 +2,7 @@
 using MiniProject.Domain.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace MiniProject.Services
     {
         public async Task<List<Photo>> GetPhotos(int albumId)
         {
-            string url = $"https://jsonplaceholder.typicode.com/photos?albumId={albumId}";
+            string url = $"{ConfigurationManager.AppSettings["baseURL"]}/photos?albumId={albumId}";
             HttpClient httpClient = new HttpClient();
 
             var response = await httpClient.GetAsync(url);
