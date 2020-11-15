@@ -18,7 +18,7 @@
         <div id="collapseOne" class="collapse show" aria-labelledby="headingPhoto" data-parent="#accordionPhotos">
             <div class="card-body">
 
-                <table class="table">
+                <table class="table table-sm table-hover table-striped">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Title</th>
@@ -44,28 +44,3 @@
         </div>
     </div>
 </div>
-
-@*<div class="card shadow no-border">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Image</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.Title</td>
-                    <td>@item.ThumbnailUrl</td>
-                    <td>
-                        <a href="javascript:void(0)" class="btn-comments" data-id="@item.AlbumId">Ver Comentarios</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
-</div>*@
